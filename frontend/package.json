@@ -64,7 +64,8 @@
     "zod": "^3.24.4"
   },
   "scripts": {
-    "start": "craco start",
+    "start": "npx serve -s build -l $PORT",
+    "dev": "craco start",
     "build": "craco build",
     "test": "craco test"
   },
