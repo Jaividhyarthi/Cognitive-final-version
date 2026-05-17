@@ -1,0 +1,139 @@
+{
+  "app_name": "Cognitive Mirror AI",
+  "description": "A university mental health Digital Twin platform that monitors, predicts, and supports student emotional wellbeing. It integrates real-time alerts, AI-driven stress predictions, a counselor portal, and an interactive 3D digital twin brain visualization.",
+  "theme": "dark",
+  "archetype": "Archetype 1 (Organic & Earthy) adapted to Dark Theme (Clinical but Warm). The interface fuses clinical healthcare precision with modern SaaS aesthetics. It uses deep oceanic/slate tones combined with trusting Teal and organic Amber to avoid the cold, intimidating feel of standard tech dashboards.",
+  "typography": {
+    "fonts": {
+      "headings": "Outfit",
+      "body": "Inter",
+      "mono": "JetBrains Mono"
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight font-light",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight",
+      "h3": "text-xl sm:text-2xl",
+      "h4": "text-lg sm:text-xl",
+      "body": "text-base md:text-sm leading-relaxed",
+      "labels": "text-xs uppercase tracking-[0.2em] font-medium"
+    },
+    "rules": [
+      "Headings must use Outfit. DO NOT use Inter for any headings.",
+      "Use wide tracking for small overlines/labels (tracking-[0.2em]).",
+      "Limit heading line-height to 'leading-none' or 'leading-tight'."
+    ]
+  },
+  "color_palette": {
+    "background": {
+      "main": "#0B1120",
+      "surface": "#0F172A",
+      "surface_elevated": "#1E293B"
+    },
+    "primary": {
+      "base": "#0D9488",
+      "hover": "#0F766E",
+      "glow": "#2DD4BF"
+    },
+    "accent": {
+      "base": "#F59E0B",
+      "hover": "#D97706",
+      "glow": "#FBBF24"
+    },
+    "alerts": {
+      "tier1_low": "#10B981",
+      "tier2_moderate": "#F59E0B",
+      "tier3_crisis": "#EF4444"
+    },
+    "text": {
+      "primary": "#F8FAFC",
+      "secondary": "#94A3B8",
+      "muted": "#64748B"
+    },
+    "borders": {
+      "subtle": "rgba(255, 255, 255, 0.1)",
+      "focus": "#0D9488"
+    },
+    "rules": [
+      "Tint all grays with slate/blue for a cool, calming clinical backdrop.",
+      "Never use pure black (#000000) or pure white (#FFFFFF).",
+      "Use Teal (#0D9488) primarily for key actions, progress, and healthy status.",
+      "Use Amber (#F59E0B) for 24-hour predictions, burnout risk, and moderate alerts.",
+      "Ensure 4.5:1 minimum contrast for normal text and 3:1 for large text against dark backgrounds."
+    ]
+  },
+  "layout_and_spacing": {
+    "grid_system": {
+      "dashboard": "MODE B: THE 'CONTROL ROOM' GRID. Tight gaps (gap-4 or gap-6). Use col-span-1 for summary metrics, col-span-2 or 3 for 24-hr prediction charts, and a large central span for the Digital Twin Brain Visualization.",
+      "landing_page": "MODE A: THE 'TETRIS' GRID. Wide gaps (gap-8 to gap-12). Asymmetrical bento layouts showcasing platform features."
+    },
+    "spacing_rules": [
+      "Generous Spacing Philosophy: Containers with borders MUST have internal padding (p-6 or p-8).",
+      "Never center everything; left-align dense data, labels, and forms.",
+      "Ensure responsive heights. Do not let images or visualizations exceed 80vh on mobile."
+    ]
+  },
+  "components": {
+    "surfaces": {
+      "cards": "Flat solid backgrounds (bg-slate-900) with subtle 1px inner borders (border-white/10). DO NOT use glassmorphism for medical/health data panels to prevent visual refraction of crucial data.",
+      "headers": "Solid background with a hard bottom border if content cuts off. Use backdrop-blur-xl bg-slate-900/80 only for sticky navigation.",
+      "footers": "Dark background, massive spacing (py-24), large typography for the final CTA."
+    },
+    "interactions": {
+      "buttons": "Flat colors. Primary: bg-teal-600 text-white hover:bg-teal-700. Secondary: bg-slate-800 text-slate-200 hover:bg-slate-700. Add focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-slate-900.",
+      "inputs": "Use Shadcn customized components. Flat, rectangular, rounded-md, subtle border."
+    },
+    "visualizations": {
+      "digital_twin_brain": "Centerpiece 3D visualization. Use React Three Fiber (@react-three/fiber) with a custom particle geometry or react-force-graph-3d. Render glowing teal and amber nodes to represent the brain on a transparent or dark slate canvas. Surround it with 4 overlay floating panels (State Mirror, Simulation Engine, Treatment Tester, Trajectory Recorder).",
+      "charts": "Use Recharts. Smooth area charts with gradient fills (Teal for positive trajectory, Amber for burnout risk/stress). Hide axis lines, use subtle dotted grid lines."
+    }
+  },
+  "motion_and_interactions": {
+    "rules": [
+      "Micro-interactions: Subtle scale (-translate-y-1) and shadow updates on dashboard widgets on hover.",
+      "Must explicitly set text color on hover (e.g., hover:bg-teal-600 hover:text-white).",
+      "Use Framer Motion for layout transitions and stagger effects on the dashboard metrics.",
+      "Respect 'prefers-reduced-motion'."
+    ]
+  },
+  "icons_and_assets": {
+    "icon_library": "@phosphor-icons/react (Duotone weight for high-end feel)",
+    "images": {
+      "hero_background": {
+        "url": "https://images.unsplash.com/photo-1764336312138-14a5368a6cd3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGdsb3dpbmclMjBicmFpbiUyMG5ldHdvcmt8ZW58MHx8fHwxNzc2MDY3NDgxfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract glowing brain network. Use as a background for the landing page hero or onboarding wizard with a heavy overlay (bg-slate-900/80)."
+      },
+      "student_hero": {
+        "url": "https://images.unsplash.com/photo-1513746199652-7a5904642685?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxzdHVkZW50JTIwc3R1ZHlpbmclMjBsYXB0b3AlMjBkYXJrJTIwcm9vbXxlbnwwfHx8fDE3NzYwNjc0ODF8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Student studying in a dark room. Use for student-facing landing page sections."
+      },
+      "counselor_avatar_1": {
+        "url": "https://images.unsplash.com/photo-1610721193651-e6aca85b45aa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjB0aGVyYXBpc3QlMjBwb3J0cmFpdCUyMGRhcmslMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc3NjA2NzQ2N3ww&ixlib=rb-4.1.0&q=85",
+        "description": "Professional therapist portrait. Use in the counselor portal and therapy appointment UI."
+      },
+      "counselor_avatar_2": {
+        "url": "https://images.unsplash.com/photo-1772987273687-4866382c146f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB0aGVyYXBpc3QlMjBwb3J0cmFpdCUyMGRhcmslMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc3NjA2NzQ2N3ww&ixlib=rb-4.1.0&q=85",
+        "description": "Professional therapist portrait 2."
+      },
+      "music_therapy_cover_1": {
+        "url": "https://images.unsplash.com/photo-1686519093104-3140c6dcf284?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDV8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHNvdW5kJTIwd2F2ZXMlMjBkYXJrfGVufDB8fHx8MTc3NjA2NzQ4MXww&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract dark sound waves. Use for the music therapy player album cover."
+      },
+      "music_therapy_cover_2": {
+        "url": "https://images.unsplash.com/photo-1547355253-ff0740f6e8c1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2ODh8MHwxfHNlYXJjaHwxfHxjYWxtJTIwbG8tZmklMjBhZXN0aGV0aWMlMjBtdXNpYyUyMGNvdmVyfGVufDB8fHx8MTc3NjA2NzQ2N3ww&ixlib=rb-4.1.0&q=85",
+        "description": "Calm lo-fi aesthetic image. Use for music therapy player variations."
+      }
+    }
+  },
+  "instructions_to_main_agent": [
+    "Initialize Tailwind config with the custom colors: slate (slate-900 as main bg), teal-600 (#0D9488), and amber-500 (#F59E0B). Ensure dark mode is explicitly forced or set as default.",
+    "Install critical UI libraries: lucide-react (fallback), @phosphor-icons/react (primary), recharts, and framer-motion.",
+    "Student Dashboard Layout: Implement a dense 'Control Room' Bento Grid. Top row: 6 metric cards (Stress, Fatigue, Emotional Stability, Cognitive Load, Burnout Risk, Crisis Risk).",
+    "Real-time Alert System: Implement 3 severity tiers using colors (Green/Teal for low, Amber for moderate risk/burnout, Red for crisis). Ensure high accessibility contrast for these alerts.",
+    "3D Brain Visualization Centerpiece: Use @react-three/fiber and three to create a floating brain graphic. If too complex, use react-force-graph-3d configured to look like neural networks with glowing teal/amber particles. Surround the 3D canvas with 4 interactive UI modules (State Mirror, Simulation Engine, Treatment Tester, Trajectory Recorder).",
+    "Music Therapy Player: Build a sticky or fixed widget at the bottom or side of the dashboard, using the provided abstract sound wave covers.",
+    "Counselor & Admin Analytics: Use Recharts for trend analysis, rendering smooth area charts and progress bars.",
+    "CRITICAL: DO NOT use 'Inter' for headings. Configure Google Fonts to import 'Outfit' for all headings and 'Inter' for body text.",
+    "CRITICAL: Every interactive element (buttons, tabs, inputs, alert dismissals, nav links) MUST have a 'data-testid' attribute using kebab-case (e.g., data-testid='music-player-play-btn').",
+    "NEVER use placeholder images. Map the provided URLs exactly for all visuals."
+  ]
+}
